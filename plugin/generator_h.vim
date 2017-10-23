@@ -22,7 +22,7 @@ autocmd	BufNewFile	*.h	call	Generate_h_42()
 
 function! Generate_h_42()
 	let l:name = expand('%:f')
-	let l:cmd = '/usr/bin/basename ' . l:name
+	let l:cmd = '/usr/bin/basename' . l:name
 	let l:newname = system(l:cmd)
 	let l:newname = toupper(l:newname)
 	"let l:newname = substitute(l:newname, "\\.", "_", "g")
