@@ -27,6 +27,6 @@ function! Generate_h_42()
 	let l:newname = toupper(l:newname)
 	"let l:newname = substitute(l:newname, "\\.", "_", "g")
 	"let l:newname = substitute(l:newname, "\\n", "", "g")
-	exe ":normal A" . "#ifndef " . l:newname . "\n# define " . l:newname . "\n\n\n\n#endif"
-	exe ":4"
+	"exe ":normal A" . "#ifndef " . l:newname . "\n# define " . l:newname . "\n\n\n\n#endif"
+	"exe ":4"
 endfunction
