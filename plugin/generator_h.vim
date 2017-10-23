@@ -25,8 +25,8 @@ function! Generate_h_42()
 	let l:cmd = '/usr/bin/basename ' . l:name
 	let l:newname = system(l:cmd)
 	let l:newname = toupper(l:newname)
-	let l:newname = substitute(l:newname, "\\.", "_", "g")
-	let l:newname = substitute(l:newname, "\\n", "", "g")
+	"let l:newname = substitute(l:newname, "\\.", "_", "g")
+	"let l:newname = substitute(l:newname, "\\n", "", "g")
 	exe ":normal A" . "#ifndef " . l:newname . "\n# define " . l:newname . "\n\n\n\n#endif"
-	endif
+	exe ":4"
 endfunction
